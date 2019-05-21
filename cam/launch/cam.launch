@@ -1,0 +1,13 @@
+ <launch>
+
+    <rosparam file="/home/naveen/.ros/camera_info/head_camera.yaml" />
+    
+     <node name="cam_param" type="cam_param" pkg="cam" output="screen">
+        <remap from="colour_image" to="usb_cam/image_raw" />
+    </node>  
+
+
+    <node name="webcam" type="webcam" pkg="cam" output="screen">
+    </node>
+
+</launch>
